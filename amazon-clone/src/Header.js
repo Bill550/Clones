@@ -37,10 +37,11 @@ function Header() {
 
             {/* // NavBar Component // */ } 
             <div className="header__nav" >
-                <Link to ={!user && '/login'}>
+                <Link to={!user && '/login'}> 
+                    {/* link to and history: link use to change URL and history helps us to pass the User from One page to another */}
                     <div onClick={handleAuthentication} className="haeder__option" >
                         <span className="header__optionLineOne">
-                            Hello {user?.email}
+                            Hello {!user ? 'Guest': user.email}
                         </span>
 
                         < span className="header__optionLineTwo" >

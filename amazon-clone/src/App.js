@@ -7,7 +7,15 @@ import Checkout from './Checkout';
 import Login from './Login';
 import { auth } from "./firebase";
 import { useStateValue } from './StateProvider';
+import Payment from './Payment';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./Orders"
 
+
+
+
+const promise = loadStripe('pk_test_51HQC8WLtqV8uAAoEC9igjszMh4mJT6n7hdy8w1hynYzPmekKBGPbyBmCQJz1j2wLfJTlDI9cQgiVd9mgdFpxAwwh00x1zHCe4O');
 
 
 function App() {
@@ -41,6 +49,11 @@ function App() {
 
         <Switch>
 
+          {/* Orders Page */}
+          <Route path='/orders'>
+            <Orders/>
+          </Route>
+          
           {/* Login Page */}
           <Route path="/login">
             <Login/> {/* Components */}
@@ -55,6 +68,20 @@ function App() {
             <Checkout />
           </Route>
 
+        {/* Payment Page */}
+          <Route path="/payment">
+            
+            {/*Header*/}
+            <Header />
+            {/* // from ⬆ in import */}
+            <Elements stripe={promise}>
+              {/*Payment*/}
+              <Payment/>
+            </Elements>
+      
+          </Route>
+
+          
           {/* //Home Page */}
           <Route path="/">      {/*Defult Route has to be in Bottom of all Route*/}
             {/*Header*/}
