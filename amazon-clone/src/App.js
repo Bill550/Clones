@@ -51,6 +51,9 @@ function App() {
 
           {/* Orders Page */}
           <Route path='/orders'>
+            {/*Header*/}
+            <Header />
+            {/* Orderp  */}
             <Orders/>
           </Route>
           

@@ -9,6 +9,8 @@ link and history : link use to change URL and history helps us to pass the User 
 
 
 
+firebase init // for hosting || Function folder For BackEnd ETC...
+
 
 // this is  BACK-END ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ ////////////////////////////////////////////////////////
 {/*
